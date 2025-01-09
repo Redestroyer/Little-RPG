@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1bqrl1ah3gv6"]
+
+[ext_resource type="PackedScene" uid="uid://b7bdsol8cj6u3" path="res://Instanciables/Tree.tscn" id="1_5rxcj"]
+[ext_resource type="PackedScene" uid="uid://pssni841ntnh" path="res://Instanciables/Main Character.tscn" id="1_8si5b"]
+[ext_resource type="Script" path="res://Scripts/PositionLabel.cs" id="3_es2ut"]
+[ext_resource type="PackedScene" uid="uid://b1ck43lyb0r88" path="res://Instanciables/Medium Slime.tscn" id="4_bfhxy"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_sm24g"]
+resource_name = "Scenes"
+scenes/1/scene = ExtResource("1_5rxcj")
+
+[sub_resource type="TileSet" id="TileSet_xa8qc"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 8
+sources/2 = SubResource("TileSetScenesCollectionSource_sm24g")
+
+[node name="Main World" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 7, 0, 4, 0, 2, 0, 0, 0, 0, 0, 1, 0)
+tile_set = SubResource("TileSet_xa8qc")
+
+[node name="Main Character" parent="." instance=ExtResource("1_8si5b")]
+position = Vector2(304, 144)
+
+[node name="Main Camera" type="Camera2D" parent="Main Character"]
+
+[node name="HUD" type="CanvasLayer" parent="Main Character/Main Camera"]
+layer = 3
+
+[node name="Position Display" type="PanelContainer" parent="Main Character/Main Camera/HUD"]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main Character/Main Camera/HUD/Position Display"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Main Character/Main Camera/HUD/Position Display/HBoxContainer"]
+auto_translate_mode = 2
+layout_mode = 2
+text = "Position:
+{0}"
+script = ExtResource("3_es2ut")
+
+[node name="CheckButton" type="CheckButton" parent="Main Character/Main Camera/HUD/Position Display/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"CheckButtonArrowSmall"
+button_pressed = true
+
+[node name="Medium Slime" parent="." instance=ExtResource("4_bfhxy")]
+position = Vector2(384, 152)
+
+[connection signal="toggled" from="Main Character/Main Camera/HUD/Position Display/HBoxContainer/CheckButton" to="Main Character/Main Camera/HUD/Position Display/HBoxContainer/Label" method="set_visible"]

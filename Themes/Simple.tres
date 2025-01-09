@@ -1,0 +1,36 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dhfli1ddxuwlm"]
+
+[ext_resource type="Texture2D" uid="uid://c72q84qywski" path="res://Images/Small Insertion Arrow_Left.png" id="1_5ms6o"]
+[ext_resource type="Texture2D" uid="uid://bjuwgllra538" path="res://Images/Simple Panel.png" id="1_pxgb6"]
+[ext_resource type="FontFile" uid="uid://bqckfk2a2n1js" path="res://Fonts/PublicPixel-rv0pA.ttf" id="1_qnbyy"]
+[ext_resource type="Texture2D" uid="uid://j7siknym0i1" path="res://Images/Small Insertion Arrow_Right.png" id="2_k1j5m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tc825"]
+texture = ExtResource("1_pxgb6")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.17, 0.17, 0.17, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnfot"]
+texture = ExtResource("1_pxgb6")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.17, 0.17, 0.17, 1)
+
+[resource]
+CheckButtonArrowSmall/base_type = &"CheckButton"
+CheckButtonArrowSmall/colors/font_color = Color(0, 0, 0, 0)
+CheckButtonArrowSmall/colors/icon_disabled_color = Color(0.34, 0.34, 0.34, 1)
+CheckButtonArrowSmall/font_sizes/font_size = 16
+CheckButtonArrowSmall/icons/checked = ExtResource("1_5ms6o")
+CheckButtonArrowSmall/icons/checked_mirrored = ExtResource("2_k1j5m")
+CheckButtonArrowSmall/icons/unchecked = ExtResource("2_k1j5m")
+CheckButtonArrowSmall/icons/unchecked_mirrored = ExtResource("1_5ms6o")
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("1_qnbyy")
+Panel/styles/panel = SubResource("StyleBoxTexture_tc825")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_tnfot")
