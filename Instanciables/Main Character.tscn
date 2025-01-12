@@ -820,29 +820,29 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n5cbr"]
 advance_mode = 2
-advance_expression = "get(\"moving\")"
+advance_expression = "moving"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pqovp"]
 advance_mode = 2
-advance_expression = "!get(\"moving\")"
+advance_expression = "!moving"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7tfbi"]
 advance_mode = 2
-advance_expression = "get(\"swinging\")"
+advance_expression = "swinging"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0pet3"]
 switch_mode = 2
 advance_mode = 2
-advance_expression = "!get(\"moving\")"
+advance_expression = "!moving"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4rbin"]
 advance_mode = 2
-advance_expression = "get(\"swinging\")"
+advance_expression = "swinging"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pagbj"]
 switch_mode = 2
 advance_mode = 2
-advance_expression = "get(\"moving\")"
+advance_expression = "moving"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vxawi"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_0nmw3")
@@ -856,7 +856,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(124, 25)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_gters"]
-graph_offset = Vector2(3.90002, 157.7)
+graph_offset = Vector2(115, 181)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_vxawi")
 nodes/StateMachine/position = Vector2(400, 180)
 nodes/output/position = Vector2(860, 260)

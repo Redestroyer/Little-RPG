@@ -30,8 +30,8 @@ layer = 3
 
 [node name="Position Display" type="PanelContainer" parent="Main Character/Main Camera/HUD"]
 texture_filter = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 68.0
+offset_bottom = 24.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Main Character/Main Camera/HUD/Position Display"]
 layout_mode = 2
@@ -48,7 +48,8 @@ layout_mode = 2
 theme_type_variation = &"CheckButtonArrowSmall"
 button_pressed = true
 
-[node name="Medium Slime" parent="." instance=ExtResource("4_bfhxy")]
+[node name="Medium Slime" parent="." node_paths=PackedStringArray("PlayerCharacter") instance=ExtResource("4_bfhxy")]
 position = Vector2(384, 152)
+PlayerCharacter = NodePath("../Main Character")
 
 [connection signal="toggled" from="Main Character/Main Camera/HUD/Position Display/HBoxContainer/CheckButton" to="Main Character/Main Camera/HUD/Position Display/HBoxContainer/Label" method="set_visible"]

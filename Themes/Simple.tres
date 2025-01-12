@@ -5,20 +5,24 @@
 [ext_resource type="FontFile" uid="uid://bqckfk2a2n1js" path="res://Fonts/PublicPixel-rv0pA.ttf" id="1_qnbyy"]
 [ext_resource type="Texture2D" uid="uid://j7siknym0i1" path="res://Images/Small Insertion Arrow_Right.png" id="2_k1j5m"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tc825"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eo34i"]
 texture = ExtResource("1_pxgb6")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
 modulate_color = Color(0.17, 0.17, 0.17, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnfot"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
 texture = ExtResource("1_pxgb6")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
 modulate_color = Color(0.17, 0.17, 0.17, 1)
 
 [resource]
@@ -30,7 +34,7 @@ CheckButtonArrowSmall/icons/checked = ExtResource("1_5ms6o")
 CheckButtonArrowSmall/icons/checked_mirrored = ExtResource("2_k1j5m")
 CheckButtonArrowSmall/icons/unchecked = ExtResource("2_k1j5m")
 CheckButtonArrowSmall/icons/unchecked_mirrored = ExtResource("1_5ms6o")
-Label/font_sizes/font_size = 8
+Label/font_sizes/font_size = 4
 Label/fonts/font = ExtResource("1_qnbyy")
-Panel/styles/panel = SubResource("StyleBoxTexture_tc825")
+Panel/styles/panel = SubResource("StyleBoxTexture_eo34i")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_tnfot")
