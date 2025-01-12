@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dhfli1ddxuwlm"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dhfli1ddxuwlm"]
 
 [ext_resource type="Texture2D" uid="uid://c72q84qywski" path="res://Images/Small Insertion Arrow_Left.png" id="1_5ms6o"]
 [ext_resource type="Texture2D" uid="uid://bjuwgllra538" path="res://Images/Simple Panel.png" id="1_pxgb6"]
 [ext_resource type="FontFile" uid="uid://bqckfk2a2n1js" path="res://Fonts/PublicPixel-rv0pA.ttf" id="1_qnbyy"]
 [ext_resource type="Texture2D" uid="uid://j7siknym0i1" path="res://Images/Small Insertion Arrow_Right.png" id="2_k1j5m"]
+[ext_resource type="Texture2D" uid="uid://bp44r1i2mp0pp" path="res://Images/Small Panel.png" id="5_vah0m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eo34i"]
 texture = ExtResource("1_pxgb6")
@@ -11,7 +12,6 @@ texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 4.0
-modulate_color = Color(0.17, 0.17, 0.17, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnfot"]
 content_margin_left = 2.0
@@ -23,7 +23,29 @@ texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 4.0
-modulate_color = Color(0.17, 0.17, 0.17, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cel6d"]
+texture = ExtResource("5_vah0m")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+modulate_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tj8k7"]
+texture = ExtResource("5_vah0m")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+modulate_color = Color(0.16, 0.16, 0.16, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k4bvn"]
+texture = ExtResource("5_vah0m")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
 
 [resource]
 CheckButtonArrowSmall/base_type = &"CheckButton"
@@ -38,3 +60,8 @@ Label/font_sizes/font_size = 4
 Label/fonts/font = ExtResource("1_qnbyy")
 Panel/styles/panel = SubResource("StyleBoxTexture_eo34i")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_tnfot")
+SmallHealthBar/base_type = &"SmallProgressBar"
+SmallHealthBar/styles/fill = SubResource("StyleBoxTexture_cel6d")
+SmallProgressBar/base_type = &"ProgressBar"
+SmallProgressBar/styles/background = SubResource("StyleBoxTexture_tj8k7")
+SmallProgressBar/styles/fill = SubResource("StyleBoxTexture_k4bvn")

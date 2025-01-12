@@ -29,6 +29,7 @@ position = Vector2(304, 144)
 layer = 3
 
 [node name="Position Display" type="PanelContainer" parent="Main Character/Main Camera/HUD"]
+self_modulate = Color(0.16, 0.16, 0.16, 1)
 texture_filter = 1
 offset_right = 68.0
 offset_bottom = 24.0

@@ -61,7 +61,8 @@ public partial class CrawlerEnemy : Enemy
 
     public override void AI()
     {
-        if (PlayerCharacter == null) return;
+        if (PlayerCharacter is null) return;
+		if ((this as IHasHealth).IsDead) return;
 
 		var pathToPlayer = PlayerCharacter.GlobalPosition - GlobalPosition;
 		var distanceSquared = pathToPlayer.LengthSquared();
